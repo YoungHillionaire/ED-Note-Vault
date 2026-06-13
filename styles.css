@@ -1,0 +1,189 @@
+:root {
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --panel2: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #d6dee8;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --code: #f8fafc;
+  --button: #ffffff;
+  --accent: #2563eb;
+  --green: #16a34a;
+}
+body.dark {
+  --bg: #0b1220;
+  --panel: #111827;
+  --panel2: #1f2937;
+  --text: #f1f5f9;
+  --muted: #cbd5e1;
+  --border: #334155;
+  --shadow: 0 8px 24px rgba(0,0,0,0.25);
+  --code: #020617;
+  --button: #020617;
+  --accent: #38bdf8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+.hero {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 { margin: 0; font-size: 25px; }
+p { margin: 6px 0 0; color: var(--muted); }
+#themeToggle {
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.search-wrap {
+  display: flex;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 14px auto 0;
+}
+#search {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--text);
+}
+button {
+  border: 1px solid var(--border);
+  background: var(--button);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 11px;
+  cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+#categoryGrid {
+  max-width: 1200px;
+  margin: 12px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+.cat {
+  border: 1px solid var(--border);
+  color: white;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 13px;
+  font-weight: bold;
+}
+.cat span {
+  display: block;
+  opacity: .9;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 2px;
+}
+.cat.active { outline: 3px solid rgba(37, 99, 235, .28); transform: translateY(-1px); }
+.cat.all { background: #64748b; }
+.cat.ent { background: #0891b2; }
+.cat.chest { background: #0284c7; }
+.cat.cardio { background: #dc2626; }
+.cat.gi { background: #ea580c; }
+.cat.neuro { background: #2563eb; }
+.cat.trauma { background: #ca8a04; }
+.cat.nephro { background: #9333ea; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+}
+.notice, #summary {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.card-title h2 { margin: 0; font-size: 20px; }
+.badge {
+  background: rgba(255,255,255,.18);
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.block {
+  border-top: 1px solid var(--border);
+  padding: 14px 16px;
+}
+.block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.block-head h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  background: var(--code);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.no-results {
+  color: var(--muted);
+  padding: 24px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  header { position: static; }
+  .card-title { align-items: flex-start; flex-direction: column; }
+  .search-wrap { flex-direction: column; }
+}
