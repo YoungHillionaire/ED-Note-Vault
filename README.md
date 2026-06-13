@@ -10,14 +10,12 @@ A searchable, browser-based template library for ED documentation, organized by 
 - Trauma
 - Nephro
 
-## Current templates
-- ENT: URTI / Viral Illness
-
-All other categories are set up and ready — add templates one by one in `data.js`.
+Each template includes History, Physical Examination, MDM/Differential Diagnosis, and Discharge sections, ready to copy and edit for the actual patient.
 
 ## Usage
 - Open `index.html` (or your published GitHub Pages URL)
 - Search by symptom/diagnosis, or filter by system using the category buttons
+- Click a template's title bar to expand/collapse it
 - Click "Copy" on any section, or "Copy Full" for the entire note
 - Paste into your EMR and edit placeholders (`______` / `___`) for the actual patient
 

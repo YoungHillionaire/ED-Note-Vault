@@ -88,6 +88,15 @@ const TEMPLATES = [
     "exam": "Conscious, alert and oriented, not in distress.\nGCS 15/15.\nVital signs reviewed.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\n\nPA: soft, lax, lower abdominal / suprapubic / RIF / LIF tenderness over ______ as documented, no guarding, no rigidity, no rebound tenderness, bowel sounds present.\n\nPelvic examination findings documented if performed.",
     "mdm": "Differential diagnoses considered including ectopic pregnancy, ovarian torsion, ruptured ovarian cyst, PID, appendicitis, UTI, renal colic, diverticulitis, primary dysmenorrhea and other gynecological or abdominal causes as appropriate.\n\nPregnancy status and investigations reviewed if performed.\n\nNo evidence of ectopic pregnancy, ovarian torsion or other acute gynecological/surgical emergency requiring admission at present.",
     "discharge": "Feels better.\n\nAnalgesia and follow-up advice explained.\n\nSafety ER return instructions explained including worsening pain, syncope, heavy vaginal bleeding, positive pregnancy test if not already known, fever, persistent vomiting, shoulder tip pain, dizziness, new discharge, or any other concerns.\n\nFollow up with primary care/OB-Gyn as appropriate."
+  },
+  {
+    "category": "Nephro",
+    "title": "UTI / Cystitis",
+    "keywords": "uti cystitis dysuria frequency urgency urine",
+    "history": "Patient no past medical illness, no known drug allergies.\n\nPresented to the ED with ___ days history of dysuria, urinary frequency and urgency.\n\nAssociated with suprapubic discomfort / hematuria as documented.\n\nLMP / pregnancy possibility reviewed if applicable.\n\nDenied fever, flank pain, vomiting, rigors, confusion, vaginal discharge, or other symptoms.",
+    "exam": "Conscious, alert and oriented, not in distress.\nGCS 15/15.\nVital signs reviewed, afebrile.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\n\nPA: soft, lax, suprapubic tenderness / non-tender as documented, no guarding, no rigidity, no rebound tenderness.\n\nRenal angle: no renal angle tenderness.",
+    "mdm": "Presentation most consistent with urinary tract infection / cystitis.\n\nDifferential diagnoses considered including pyelonephritis, renal colic, STI/urethritis, and pelvic pathology if applicable.\n\nUrine results and investigations reviewed and explained.\n\nAntibiotics prescribed as appropriate according to clinical assessment/local guideline.\n\nNo evidence of pyelonephritis, sepsis, or other complication requiring admission at present.",
+    "discharge": "Feels better.\n\nHydration, medication compliance, and follow-up if symptoms persist explained.\n\nSafety ER return instructions explained including fever, flank pain, vomiting, worsening pain, rigors, dizziness/syncope, confusion, reduced urine output, or any other concerns.\n\nFollow up with primary care if symptoms persist."
   }
   //   "category": "ENT" | "Chest" | "Cardio" | "GI" | "Neuro" | "Trauma" | "Nephro",
   //   "title": "Diagnosis name",
