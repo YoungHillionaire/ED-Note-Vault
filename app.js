@@ -137,9 +137,20 @@ function render() {
     card.innerHTML = `
       <div class="card-title" style="background:${categoryBg(t.category)}">
         <h2>${escapeHtml(t.title)}</h2>
-        <div class="badge">${escapeHtml(t.category)}</div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div class="badge">${escapeHtml(t.category)}</div>
+          <span class="chevron">▾</span>
+        </div>
       </div>
+      <div class="card-body"></div>
     `;
+
+    const cardTitle = card.querySelector(".card-title");
+    const cardBody = card.querySelector(".card-body");
+    cardTitle.style.cursor = "pointer";
+    cardTitle.onclick = () => {
+      card.classList.toggle("collapsed");
+    };
 
     const allBlock = document.createElement("div");
     allBlock.className = "block";
@@ -151,7 +162,7 @@ function render() {
       <pre>${escapeHtml(combined)}</pre>
     `;
     allBlock.querySelector("button").onclick = e => copyText(combined, e.target);
-    card.appendChild(allBlock);
+    cardBody.appendChild(allBlock);
 
     blocks.forEach(([label, text]) => {
       const block = document.createElement("div");
@@ -164,8 +175,11 @@ function render() {
         <pre>${escapeHtml(text)}</pre>
       `;
       block.querySelector("button").onclick = e => copyText(text, e.target);
-      card.appendChild(block);
+      cardBody.appendChild(block);
     });
+
+    // start collapsed
+    card.classList.add("collapsed");
 
     results.appendChild(card);
   });
