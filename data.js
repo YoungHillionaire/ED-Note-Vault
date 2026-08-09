@@ -133,5 +133,14 @@ const TEMPLATES = [
     "exam": "Conscious, alert and oriented, back to baseline.\nGCS 15/15.\nVital signs reviewed.\nOrthostatic vitals performed if applicable.\n\nCVS: S1 + S2, no murmur, regular rate and rhythm, no JVD, peripheral pulses palpable.\nChest: equal air entry bilaterally, no added sounds.\nPA: soft, lax, non-tender.\n\nCNS: pupils equal and reactive to light, no facial asymmetry, power 5/5 in all four limbs, sensation intact bilaterally, plantars downgoing bilaterally, reflexes symmetrical, no focal neurological deficit.\n\nTrauma assessment: no head injury or other injuries identified.",
     "mdm": "Differential diagnoses considered including vasovagal syncope, orthostatic hypotension, dehydration, arrhythmia, ACS, PE, structural cardiac disease, seizure, hypoglycemia, anemia, hemorrhage, and other causes as appropriate.\n\nECG reviewed.\n\nHigh-risk features reviewed — exertional syncope, syncope with chest pain/palpitations, no prodrome, family history of sudden cardiac death, structural heart disease, abnormal ECG — present / absent as documented.\n\nInvestigations reviewed if performed.\n\nRisk stratification performed. No current evidence of high-risk cause requiring admission at present based on current assessment.",
     "discharge": "Patient back to baseline, feels well.\n\nAdvised hydration, avoiding prolonged standing, and trigger avoidance where applicable.\n\nDriving advice discussed as per local guidelines.\n\nSafety ER return instructions explained including recurrent syncope, chest pain, palpitations, SOB, seizure activity, neurological symptoms, injury, or any other concerns.\n\nFollow up with primary care/cardiology as appropriate."
+  },
+  {
+    "category": "Handover",
+    "title": "SBAR — Investigations Pending",
+    "keywords": "sbar handover endorse next shift workup pending investigations",
+    "history": "",
+    "exam": "",
+    "mdm": "",
+    "discharge": "SBAR HANDOVER NOTE\n\nS — SITUATION:\nPatient: ______ Age: ___ Sex: ___\nPresenting complaint: ______\nArrival time: ______\nCurrent status: stable / unwell / being monitored\n\nB — BACKGROUND:\nPMHx: ______\nRegular medications: ______\nAllergies: ______\nBrief relevant history: ______\n\nA — ASSESSMENT:\nWorking diagnosis: ______\nDifferential diagnoses being considered: ______\n\nInvestigations sent:\n- Bloods: ______\n- Urine: ______\n- Imaging: ______\n- ECG: ______\n- Other: ______\n\nResults reviewed so far: ______\nResults still pending: ______\n\nR — RECOMMENDATION:\nPlease review pending results when available.\nIf ______ → plan A: ______\nIf ______ → plan B: ______\n\nPatient to be reassessed at ______.\nIf patient deteriorates: ______\n\nHandover given by: Dr. ______\nHandover received by: Dr. ______\nTime: ______"
   }
 ];

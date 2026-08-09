@@ -49,11 +49,7 @@ header {
 }
 h1 { margin: 0; font-size: 25px; }
 p { margin: 6px 0 0; color: var(--muted); }
-#themeToggle {
-  font-size: 18px;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
+#themeToggle { font-size: 18px; padding: 8px 10px; border-radius: 10px; }
 .search-wrap {
   display: flex;
   gap: 8px;
@@ -82,7 +78,7 @@ button:hover { border-color: var(--accent); }
   max-width: 1200px;
   margin: 12px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 8px;
 }
 .cat {
@@ -100,21 +96,18 @@ button:hover { border-color: var(--accent); }
   font-weight: normal;
   margin-top: 2px;
 }
-.cat.active { outline: 3px solid rgba(37, 99, 235, .28); transform: translateY(-1px); }
-.cat.all { background: #64748b; }
-.cat.ent { background: #0891b2; }
-.cat.chest { background: #0284c7; }
-.cat.cardio { background: #dc2626; }
-.cat.gi { background: #ea580c; }
-.cat.neuro { background: #2563eb; }
-.cat.trauma { background: #ca8a04; }
-.cat.nephro { background: #9333ea; }
+.cat.active { outline: 3px solid rgba(37,99,235,.28); transform: translateY(-1px); }
+.cat.all      { background: #64748b; }
+.cat.ent      { background: #0891b2; }
+.cat.chest    { background: #0284c7; }
+.cat.cardio   { background: #dc2626; }
+.cat.gi       { background: #ea580c; }
+.cat.neuro    { background: #2563eb; }
+.cat.trauma   { background: #ca8a04; }
+.cat.nephro   { background: #9333ea; }
+.cat.handover { background: #0f766e; }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px;
-}
+main { max-width: 1200px; margin: 0 auto; padding: 18px; }
 .notice, #summary {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -139,19 +132,10 @@ main {
   color: white;
 }
 .card-title h2 { margin: 0; font-size: 20px; }
-.chevron {
-  font-size: 16px;
-  transition: transform 0.2s ease;
-}
-.card.collapsed .chevron {
-  transform: rotate(-90deg);
-}
-.card-body {
-  display: block;
-}
-.card.collapsed .card-body {
-  display: none;
-}
+.chevron { font-size: 16px; transition: transform 0.2s ease; }
+.card.collapsed .chevron { transform: rotate(-90deg); }
+.card-body { display: block; }
+.card.collapsed .card-body { display: none; }
 .badge {
   background: rgba(255,255,255,.18);
   padding: 5px 8px;
@@ -159,10 +143,7 @@ main {
   font-size: 12px;
   white-space: nowrap;
 }
-.block {
-  border-top: 1px solid var(--border);
-  padding: 14px 16px;
-}
+.block { border-top: 1px solid var(--border); padding: 14px 16px; }
 .block-head {
   display: flex;
   justify-content: space-between;
@@ -190,11 +171,7 @@ pre {
   font-size: 14px;
   line-height: 1.5;
 }
-.no-results {
-  color: var(--muted);
-  padding: 24px;
-  text-align: center;
-}
+.no-results { color: var(--muted); padding: 24px; text-align: center; }
 @media (max-width: 700px) {
   header { position: static; }
   .card-title { align-items: flex-start; flex-direction: column; }

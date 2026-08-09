@@ -13,7 +13,8 @@ const CATEGORY_ORDER = [
   "GI",
   "Neuro",
   "Trauma",
-  "Nephro"
+  "Nephro",
+  "Handover"
 ];
 
 const CATEGORY_CLASS = {
@@ -24,7 +25,8 @@ const CATEGORY_CLASS = {
   "GI": "gi",
   "Neuro": "neuro",
   "Trauma": "trauma",
-  "Nephro": "nephro"
+  "Nephro": "nephro",
+  "Handover": "handover"
 };
 
 let activeCategory = "All";
@@ -62,7 +64,6 @@ function countCategory(cat) {
 
 function renderCategories() {
   categoryGrid.innerHTML = "";
-
   CATEGORY_ORDER.forEach(cat => {
     const btn = document.createElement("button");
     btn.className = `cat ${CATEGORY_CLASS[cat] || "all"} ${cat === activeCategory ? "active" : ""}`;
@@ -78,16 +79,13 @@ function renderCategories() {
 
 function haystack(t) {
   return [t.category, t.title, t.keywords, t.history, t.exam, t.mdm, t.discharge]
-    .join(" ")
-    .toLowerCase();
+    .join(" ").toLowerCase();
 }
 
 function matches(t, query) {
   if (activeCategory !== "All" && t.category !== activeCategory) return false;
-
   const q = query.toLowerCase().trim();
   if (!q) return true;
-
   const words = q.split(/\s+/).filter(Boolean);
   const h = haystack(t);
   return words.every(w => h.includes(w));
@@ -101,7 +99,8 @@ function categoryBg(cat) {
     "GI": "#ea580c",
     "Neuro": "#2563eb",
     "Trauma": "#ca8a04",
-    "Nephro": "#9333ea"
+    "Nephro": "#9333ea",
+    "Handover": "#0f766e"
   };
   return colors[cat] || "#64748b";
 }
@@ -118,7 +117,7 @@ function render() {
   results.innerHTML = "";
 
   if (!list.length) {
-    results.innerHTML = `<div class="no-results">No templates here yet. Add one in data.js.</div>`;
+    results.innerHTML = `<div class="no-results">No templates found.</div>`;
     return;
   }
 
@@ -148,9 +147,7 @@ function render() {
     const cardTitle = card.querySelector(".card-title");
     const cardBody = card.querySelector(".card-body");
     cardTitle.style.cursor = "pointer";
-    cardTitle.onclick = () => {
-      card.classList.toggle("collapsed");
-    };
+    cardTitle.onclick = () => card.classList.toggle("collapsed");
 
     const allBlock = document.createElement("div");
     allBlock.className = "block";
@@ -178,18 +175,12 @@ function render() {
       cardBody.appendChild(block);
     });
 
-    // start collapsed
     card.classList.add("collapsed");
-
     results.appendChild(card);
   });
 }
 
-clearSearch.onclick = () => {
-  search.value = "";
-  render();
-  search.focus();
-};
+clearSearch.onclick = () => { search.value = ""; render(); search.focus(); };
 
 themeToggle.onclick = () => {
   document.body.classList.toggle("dark");
@@ -203,6 +194,5 @@ if (localStorage.getItem("theme") === "dark") {
 }
 
 search.addEventListener("input", render);
-
 renderCategories();
 render();
