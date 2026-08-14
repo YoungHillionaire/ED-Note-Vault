@@ -6,38 +6,19 @@ const clearSearch = document.getElementById("clearSearch");
 const themeToggle = document.getElementById("themeToggle");
 
 const CATEGORY_ORDER = [
-  "All",
-  "ENT",
-  "Chest",
-  "Cardio",
-  "GI",
-  "Neuro",
-  "Trauma",
-  "Nephro",
-  "Handover"
+  "All","ENT","Chest","Cardio","GI","Neuro","Trauma","Nephro","Handover"
 ];
 
 const CATEGORY_CLASS = {
-  "All": "all",
-  "ENT": "ent",
-  "Chest": "chest",
-  "Cardio": "cardio",
-  "GI": "gi",
-  "Neuro": "neuro",
-  "Trauma": "trauma",
-  "Nephro": "nephro",
-  "Handover": "handover"
+  "All":"all","ENT":"ent","Chest":"chest","Cardio":"cardio",
+  "GI":"gi","Neuro":"neuro","Trauma":"trauma","Nephro":"nephro","Handover":"handover"
 };
 
 let activeCategory = "All";
 
 function escapeHtml(text) {
   return String(text || "").replace(/[&<>"']/g, m => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
   }[m]));
 }
 
@@ -46,10 +27,7 @@ function copyText(text, button) {
     const old = button.textContent;
     button.textContent = "Copied";
     button.style.borderColor = "var(--green)";
-    setTimeout(() => {
-      button.textContent = old;
-      button.style.borderColor = "var(--border)";
-    }, 900);
+    setTimeout(() => { button.textContent = old; button.style.borderColor = "var(--border)"; }, 900);
   });
 }
 
@@ -68,17 +46,13 @@ function renderCategories() {
     const btn = document.createElement("button");
     btn.className = `cat ${CATEGORY_CLASS[cat] || "all"} ${cat === activeCategory ? "active" : ""}`;
     btn.innerHTML = `${escapeHtml(cat)}<span>${countCategory(cat)} templates</span>`;
-    btn.onclick = () => {
-      activeCategory = cat;
-      renderCategories();
-      render();
-    };
+    btn.onclick = () => { activeCategory = cat; renderCategories(); render(); };
     categoryGrid.appendChild(btn);
   });
 }
 
 function haystack(t) {
-  return [t.category, t.title, t.keywords, t.history, t.exam, t.mdm, t.discharge]
+  return [t.category, t.title, t.keywords, t.history, t.exam, t.mdm, t.discharge, t.insurance]
     .join(" ").toLowerCase();
 }
 
@@ -87,20 +61,13 @@ function matches(t, query) {
   const q = query.toLowerCase().trim();
   if (!q) return true;
   const words = q.split(/\s+/).filter(Boolean);
-  const h = haystack(t);
-  return words.every(w => h.includes(w));
+  return words.every(w => haystack(t).includes(w));
 }
 
 function categoryBg(cat) {
   const colors = {
-    "ENT": "#0891b2",
-    "Chest": "#0284c7",
-    "Cardio": "#dc2626",
-    "GI": "#ea580c",
-    "Neuro": "#2563eb",
-    "Trauma": "#ca8a04",
-    "Nephro": "#9333ea",
-    "Handover": "#0f766e"
+    "ENT":"#0891b2","Chest":"#0284c7","Cardio":"#dc2626","GI":"#ea580c",
+    "Neuro":"#2563eb","Trauma":"#ca8a04","Nephro":"#9333ea","Handover":"#0f766e"
   };
   return colors[cat] || "#64748b";
 }
@@ -130,7 +97,8 @@ function render() {
       ["History", t.history],
       ["Physical Examination", t.exam],
       ["MDM / Differential Diagnosis", t.mdm],
-      ["Discharge / Advice / Red Flags", t.discharge]
+      ["Discharge / Advice / Red Flags", t.discharge],
+      ["Insurance / Imaging Justification", t.insurance]
     ].filter(([_, text]) => text);
 
     card.innerHTML = `
@@ -164,9 +132,10 @@ function render() {
     blocks.forEach(([label, text]) => {
       const block = document.createElement("div");
       block.className = "block";
+      const isInsurance = label === "Insurance / Imaging Justification";
       block.innerHTML = `
         <div class="block-head">
-          <h3>${escapeHtml(label)}</h3>
+          <h3 ${isInsurance ? 'style="color:var(--green)"' : ""}>${escapeHtml(label)}</h3>
           <button>Copy</button>
         </div>
         <pre>${escapeHtml(text)}</pre>
