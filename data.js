@@ -136,6 +136,15 @@ const TEMPLATES = [
     "discharge": "Patient back to baseline, feels well.\n\nAdvised hydration, avoiding prolonged standing, and trigger avoidance where applicable.\n\nDriving advice discussed as per local guidelines.\n\nSafety ER return instructions explained including recurrent syncope, chest pain, palpitations, SOB, seizure activity, neurological symptoms, injury, or any other concerns.\n\nFollow up with primary care/cardiology as appropriate."
   },
   {
+    "category": "MSK",
+    "title": "Cervicalgia / Neck Spasm",
+    "keywords": "cervicalgia neck pain spasm shoulder pain cervical radiculopathy stiff neck",
+    "history": "Patient no past medical illness, no known drug allergies.\n\nPresented to the ED with right / left neck pain radiating to the right / left shoulder for ___ days.\n\nDescribed as a spasm / stiffness in the neck and shoulder area.\n\nPain worse on turning to the right / left side.\n\nNo history of trauma or fall.\n\nDenied numbness, weakness, fever, headache, or other symptoms.",
+    "exam": "Conscious, alert and oriented x3, not in distress.\nGCS 15/15.\n\nNeck: restricted range of movement to the right / left side secondary to pain.\nNo midline cervical tenderness.\nParaspinal muscle tenderness / spasm over right / left side.\nNo step-off deformity.\nNo swelling.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\n\nCNS:\nPower 5/5 in all four limbs.\nSensation intact bilaterally.\nNo focal neurological deficits.\nIntact peripheral pulses.",
+    "mdm": "Presentation consistent with cervicalgia / mechanical neck pain with muscle spasm.\n\nDifferential diagnoses considered including cervical radiculopathy, cervical disc herniation, meningitis, SAH, and other causes of neck pain as appropriate.\n\nRed flags reviewed — fever, trauma, progressive neurological deficit, malignancy — absent.\n\nNo evidence of cord compression, meningism, or other emergency pathology requiring admission or urgent imaging at present.",
+    "discharge": "Feels better.\n\nAnalgesia, muscle relaxant if prescribed, and physiotherapy follow-up advised.\n\nAdvised gentle range of motion exercises, heat application, and activity modification.\n\nSafety ER return instructions explained including new or worsening arm numbness or weakness, severe headache, fever, neck stiffness, inability to move neck, or any other concerns.\n\nFollow up with primary care/physiotherapy as appropriate."
+  },
+  {
     "category": "Handover",
     "title": "SBAR — Investigations Pending",
     "keywords": "sbar handover endorse next shift workup pending investigations",
