@@ -170,5 +170,14 @@ const TEMPLATES = [
     "exam": "",
     "mdm": "",
     "discharge": "BRIEF HANDOVER\n\nA case of 46-year-old male, medically free, presenting with severe upper abdominal pain.\n\nImpression: Abdominal pain under investigation — query pancreatitis, bowel obstruction, or other surgical pathology.\n\nECG and labs performed. CBC showing leukocytosis with left shift, remaining results within normal limits. CXR unremarkable. Awaiting lipase and CT abdomen results.\n\nPatient to be reassessed and disposition determined once results available. Tramadol 50mg given for pain prior to handover.\n\nHandover given by: Dr. Husain Dhaif\nHandover received by: Dr. Ahmed Al-Aali\nTime: 23:00"
+  },
+  {
+    "category": "Medicolegal",
+    "title": "Head Injury — External CT Request / GP Referral Documentation",
+    "keywords": "head injury ct head external gp referral medicolegal documentation neurosurgical smc transfer",
+    "history": "",
+    "exam": "",
+    "mdm": "",
+    "discharge": "Prior to the patient's presentation to the Emergency Department, I was contacted by Dr. ______ from ______, who informed me that she/he had assessed the patient and had requested a CT head. She/he stated that the patient would attend the Emergency Department following completion of the CT scan.\n\nI explained to Dr. ______ that, irrespective of the CT head findings, if the patient remained symptomatic following the reported head injury, she/he would require further clinical assessment and, depending on the clinical findings, neurosurgical evaluation. I further explained that neurosurgical services are not available at our facility and that, if neurosurgical assessment were indicated, the patient would ultimately require referral/transfer to SMC.\n\nDr. ______ stated that this was the approach being followed by herself/himself and the doctors at their facility.\n\nThe patient was also informed that a normal/negative CT head would not necessarily exclude the need for further assessment, particularly if the patient remained symptomatic, and that neurosurgical assessment may be required.\n\nThe patient was informed that neurosurgical services are not available at our facility and that the patient would need to be referred to SMC for neurosurgical assessment if indicated.\n\nThe CT head report and imaging were provided to the patient, with the imaging supplied on CD.\n\nA referral letter was also provided.\n\nThe patient was advised to attend SMC for further assessment, particularly in view of the ongoing symptoms and the lack of on-site neurosurgical services at our facility."
   }
 ];

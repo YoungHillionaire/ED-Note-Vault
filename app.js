@@ -6,12 +6,12 @@ const clearSearch = document.getElementById("clearSearch");
 const themeToggle = document.getElementById("themeToggle");
 
 const CATEGORY_ORDER = [
-  "All","ENT","Chest","Cardio","GI","Neuro","Trauma","MSK","Nephro","Handover"
+  "All","ENT","Chest","Cardio","GI","Neuro","Trauma","MSK","Nephro","Handover","Medicolegal"
 ];
 
 const CATEGORY_CLASS = {
   "All":"all","ENT":"ent","Chest":"chest","Cardio":"cardio","GI":"gi",
-  "Neuro":"neuro","Trauma":"trauma","MSK":"msk","Nephro":"nephro","Handover":"handover"
+  "Neuro":"neuro","Trauma":"trauma","MSK":"msk","Nephro":"nephro","Handover":"handover","Medicolegal":"medicolegal"
 };
 
 let activeCategory = "All";
@@ -67,7 +67,7 @@ function matches(t, query) {
 function categoryBg(cat) {
   const colors = {
     "ENT":"#0891b2","Chest":"#0284c7","Cardio":"#dc2626","GI":"#ea580c",
-    "Neuro":"#2563eb","Trauma":"#ca8a04","MSK":"#be185d","Nephro":"#9333ea","Handover":"#0f766e"
+    "Neuro":"#2563eb","Trauma":"#ca8a04","MSK":"#be185d","Nephro":"#9333ea","Handover":"#0f766e","Medicolegal":"#1e3a5f"
   };
   return colors[cat] || "#64748b";
 }
