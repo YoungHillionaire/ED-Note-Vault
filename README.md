@@ -21,6 +21,7 @@ A simple searchable browser-based library of Emergency Department documentation 
 - Trauma
 - MSK
 - Nephro
+- Allergy
 - Handover
 - Medicolegal
 
