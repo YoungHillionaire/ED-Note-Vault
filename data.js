@@ -165,30 +165,21 @@ const TEMPLATES = [
   },
   {
     "category": "Handover",
-    "title": "SBAR — Investigations Pending",
-    "keywords": "sbar handover endorse next shift workup pending investigations",
+    "title": "Handover — Case Received From Previous Shift",
+    "keywords": "handover received previous shift case received endorsed received pending investigations reassessment disposition",
     "history": "",
     "exam": "",
     "mdm": "",
-    "discharge": "SBAR HANDOVER NOTE\n\nS — SITUATION:\nPatient: ______ Age: ___ Sex: ___\nPresenting complaint: ______\nArrival time: ______\nCurrent status: stable / unwell / being monitored\n\nB — BACKGROUND:\nPMHx: ______\nRegular medications: ______\nAllergies: ______\nBrief relevant history: ______\n\nA — ASSESSMENT:\nWorking diagnosis: ______\nDifferential diagnoses being considered: ______\n\nInvestigations sent:\n- Bloods: ______\n- Urine: ______\n- Imaging: ______\n- ECG: ______\n- Other: ______\n\nResults reviewed so far: ______\nResults still pending: ______\n\nR — RECOMMENDATION:\nPlease review pending results when available.\nIf ______ → plan A: ______\nIf ______ → plan B: ______\n\nPatient to be reassessed at ______.\nIf patient deteriorates: ______\n\nHandover given by: Dr. ______\nHandover received by: Dr. ______\nTime: ______"
+    "discharge": "CASE RECEIVED / HANDOVER\n\nCase received from Dr. ______ at ______.\n\nA case of ___-year-old male/female, known to have ______ / medically free, presenting with ______.\n\nWorking impression: ______.\n\nWorkup performed prior to handover:\n- Labs: ______\n- ECG: ______\n- Imaging: ______\n- Treatment given: ______\n\nResults reviewed so far: ______.\n\nPending: ______.\n\nPatient reassessed following handover. Currently ______.\n\nPlan: Review pending investigations, reassess clinically, and determine final disposition accordingly.\n\nHandover received from: Dr. ______\nHandover received by: Dr. Husain Dhaif\nTime: ______"
   },
   {
     "category": "Handover",
-    "title": "Brief Handover",
-    "keywords": "brief handover endorse short quick summary disposition",
+    "title": "Handover — Case Endorsed To Next Shift",
+    "keywords": "handover endorsed next shift case endorsement pending investigations reassessment disposition handover given",
     "history": "",
     "exam": "",
     "mdm": "",
-    "discharge": "BRIEF HANDOVER\n\nA case of [age/sex], [PMHx / medically free], presenting with [chief complaint].\n\nImpression: [working diagnosis / r/o diagnosis].\n\n[Investigations / ECG / imaging] performed. Awaiting [pending results].\n\nPatient to be reassessed and disposition determined once results available.\n\nHandover given by: Dr. ______\nHandover received by: Dr. ______\nTime: ______"
-  },
-  {
-    "category": "Handover",
-    "title": "Brief Handover — Example (Renal Colic)",
-    "keywords": "brief handover example renal colic abdominal pain sample filled",
-    "history": "",
-    "exam": "",
-    "mdm": "",
-    "discharge": "BRIEF HANDOVER\n\nA case of 46-year-old male, medically free, presenting with severe upper abdominal pain.\n\nImpression: Abdominal pain under investigation — query pancreatitis, bowel obstruction, or other surgical pathology.\n\nECG and labs performed. CBC showing leukocytosis with left shift, remaining results within normal limits. CXR unremarkable. Awaiting lipase and CT abdomen results.\n\nPatient to be reassessed and disposition determined once results available. Tramadol 50mg given for pain prior to handover.\n\nHandover given by: Dr. Husain Dhaif\nHandover received by: Dr. Ahmed Al-Aali\nTime: 23:00"
+    "discharge": "CASE ENDORSEMENT / HANDOVER\n\nA case of ___-year-old male/female, known to have ______ / medically free, presenting with ______.\n\nWorking impression: ______.\n\nWorkup performed:\n- Labs: ______\n- ECG: ______\n- Imaging: ______\n- Treatment given: ______\n\nResults reviewed so far: ______.\n\nPending: ______.\n\nPatient currently ______.\n\nCase endorsed to Dr. ______ for review of pending investigations, clinical reassessment, and final disposition.\n\nHandover given by: Dr. Husain Dhaif\nHandover received by: Dr. ______\nTime: ______"
   },
   {
     "category": "Medicolegal",
