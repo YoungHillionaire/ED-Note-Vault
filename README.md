@@ -1,20 +1,18 @@
 # ED Note Vault
 
-A lightweight, browser-based template library for Emergency Department documentation.
+A simple searchable browser-based library of Emergency Department documentation templates.
 
-## Current features
-- Search across diagnosis names, symptoms, keywords and note content
-- Filter by specialty/system category
-- Expand/collapse individual templates
-- Expand all / collapse all
+## Features
+
+- Search templates by diagnosis, symptom, or keyword
+- Filter templates by clinical category
+- Click a template title to expand or collapse it
 - Copy individual sections or the full note
-- Favorite frequently used templates
-- Recently used templates
-- Comfortable / compact viewing modes
-- Persistent light/dark theme
-- Mobile-responsive layout
+- Light and dark mode
+- No login, database, or external dependency required
 
 ## Categories
+
 - ENT
 - Chest
 - Cardio
@@ -26,44 +24,31 @@ A lightweight, browser-based template library for Emergency Department documenta
 - Handover
 - Medicolegal
 
-Each template may include History, Physical Examination, MDM/Differential Diagnosis, Discharge/Advice, and Insurance/Imaging Justification sections.
+Each template may contain History, Physical Examination, MDM / Differential Diagnosis, Discharge / Advice / Red Flags, and Insurance / Imaging Justification sections.
 
 ## Usage
-1. Open `index.html` locally or visit the published GitHub Pages URL.
-2. Search by symptom, diagnosis or keyword, or select a category.
-3. Click a template title to expand it.
-4. Use **Copy** for one section or **Copy full** for the complete note.
-5. Edit all placeholders and statements to match the actual patient encounter before pasting into the EMR.
 
-Keyboard shortcut: press `/` to focus the search box. Press `Esc` while searching to clear it.
+1. Open `index.html` or the published GitHub Pages URL.
+2. Search by symptom, diagnosis, or keyword, or select a category.
+3. Click a template title bar to open it.
+4. Click **Copy** on a section or **Copy Full** for the complete note block.
+5. Paste into the EMR and edit all placeholders to reflect the actual patient encounter.
 
-## Adding a new template
-Add a new object to the `TEMPLATES` array in `data.js`:
+## Adding a template
 
-```js
-{
-  "category": "ENT",
-  "title": "Diagnosis name",
-  "keywords": "search terms separated by spaces",
-  "history": "...",
-  "exam": "...",
-  "mdm": "...",
-  "discharge": "...",
-  "insurance": "..." // optional
-}
-```
+Open `data.js` and add a new object to the `TEMPLATES` array using the existing objects as examples.
 
-Supported categories:
-`ENT | Chest | Cardio | GI | Neuro | Trauma | MSK | Nephro | Handover | Medicolegal`
+## GitHub Pages
 
-## GitHub Pages deployment
-Place these files in the repository root:
+Keep these files in the repository root:
+
 - `index.html`
 - `styles.css`
 - `data.js`
 - `app.js`
 
-Then go to **Settings → Pages**, publish from the `main` branch and `/ (root)` folder.
+Then publish the `main` branch from the repository root in **Settings → Pages**.
 
-## Clinical disclaimer
-These templates are documentation starting points only. They do not replace clinical judgment, local policies, validated decision tools, specialty advice, or patient-specific assessment. Always edit the template to reflect the actual encounter and do not enter patient-identifiable information into the site itself.
+## Disclaimer
+
+Templates are starting points only. Always edit them to reflect the actual patient encounter, your own examination and clinical judgment, investigations, local policy, and specialist advice. Do not enter patient-identifiable information into this tool.
