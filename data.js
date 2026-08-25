@@ -109,6 +109,15 @@ const TEMPLATES = [
     "discharge": "Feels better.\n\nAnalgesia (NSAIDs / paracetamol) and follow-up advice explained.\n\nSafety ER return instructions explained including worsening or severe pain, syncope, heavy vaginal bleeding, positive pregnancy test, fever, persistent vomiting, shoulder tip pain, abnormal discharge, or any other concerns.\n\nFollow up with primary care/OB-Gyn for further evaluation if recurrent or worsening symptoms."
   },
   {
+    "category": "GI",
+    "title": "Anal Fissure",
+    "keywords": "anal fissure constipation rectal pain hard stools dre perianal hemorrhoids",
+    "history": "Patient is a ___ -year-old male / female, no past medical illness, no known drug allergies.\n\nPresented to the ED with ___ days history of anal pain.\n\nAssociated with constipation and passage of hard stools.\n\nDenied fever, abdominal pain, vomiting, per rectal bleeding, anal discharge, or other symptoms.",
+    "exam": "Conscious, alert and oriented x3, not in distress.\nGCS 15/15.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\nPA: soft, lax, non-tender, not distended, bowel sounds present.\n\nDigital Rectal Examination (DRE):\nAnal fissure located at ______ position (posterior / anterior).\nNo external hemorrhoids.\nNo perianal abscess.\nNo mass palpated.",
+    "mdm": "Presentation consistent with acute anal fissure, likely secondary to constipation and passage of hard stools.\n\nDifferential diagnoses considered including anal fissure, hemorrhoids, perianal abscess, inflammatory bowel disease, and other anorectal pathology as appropriate.\n\nNo evidence of abscess, bleeding requiring intervention, or other surgical emergency at present.\n\nManagement plan discussed including dietary advice, hydration, stool softeners, topical analgesia, and sitz baths.",
+    "discharge": "Feels better.\n\nAdvised increased fluid intake, high-fiber diet, and stool softeners to prevent recurrence.\n\nTopical analgesia / topical GTN / topical diltiazem prescribed as appropriate.\n\nSitz baths advised twice daily.\n\nSafety ER return instructions explained including worsening pain, per rectal bleeding, fever, swelling or discharge around the anal area, or any other concerns.\n\nFollow up with primary care / colorectal surgery if symptoms persist or worsen."
+  },
+  {
     "category": "Neuro",
     "title": "Headache",
     "keywords": "headache migraine sah thunderclap meningitis tension cluster neuro ct",
@@ -145,6 +154,16 @@ const TEMPLATES = [
     "discharge": "Feels better.\n\nAnalgesia, muscle relaxant if prescribed, and physiotherapy follow-up advised.\n\nAdvised gentle range of motion exercises, heat application, and activity modification.\n\nSafety ER return instructions explained including new or worsening arm numbness or weakness, severe headache, fever, neck stiffness, inability to move neck, or any other concerns.\n\nFollow up with primary care/physiotherapy as appropriate."
   },
   {
+    "category": "Nephro",
+    "title": "Acute Urinary Retention",
+    "keywords": "acute urinary retention aur bph foley catheter bladder prostate",
+    "history": "Patient is a ___ -year-old male, known to have benign prostatic hyperplasia (BPH) on regular treatment, no known drug allergies.\n\nPresented to the ED with acute urinary retention since ______.\n\nPrevious similar episode: yes — approximately ___ ago / no prior episodes.\n\nDenied chest pain, shortness of breath, fever, hematuria, or dysuria.",
+    "exam": "Conscious, alert and oriented x3, in pain.\nGCS 15/15.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\n\nPA: soft, lax, distended bladder palpable approximately ___ finger-breadth(s) below the umbilicus, non-tender / tender on palpation.\n\nExternal genitalia: no visible abnormality, no phimosis, no meatal stenosis.",
+    "mdm": "Presentation consistent with acute urinary retention in the context of known BPH.\n\nDifferential diagnoses considered including BPH, urethral stricture, constipation, medication-induced retention, neurogenic bladder, and other causes as appropriate.\n\nRelevant investigations sent including urine analysis, renal function, PSA if applicable, and other bloods as clinically indicated.\n\nUrinary catheterization performed as documented.",
+    "discharge": "Under aseptic technique, urethral catheterization was performed.\n\nFoley catheter size ___ Fr inserted atraumatically.\n\nImmediate clear / blood-stained urine drained upon insertion.\n\nBalloon inflated with 10cc / 30cc of sterile water and catheter secured.\n\nTotal urine drained: approximately ___ mls.\n\nPatient's pain and discomfort improved significantly following catheterization.\n\nLaboratory investigations sent as documented.\n\nPatient and family educated regarding catheter care.\n\nSafety ER return instructions explained including fever, rigors, reduced or absent urine output via catheter, worsening pain, hematuria, or any other concerns.\n\nFollow up with urology arranged / advised for further management of underlying BPH.",
+    "insurance": "ORDERS / PROCEDURE CODES\n\nCatheterization Procedure:\n- Catheterization-Foley — Code: 8134B\n\nEquipment:\n- Catheter Holder / Foley StatLock (FOL0101CE) — Code: UR3292\n\nLaboratory:\n- Urine analysis / urine culture: ______\n- Renal function (U/C/E): ______\n- CBC: ______\n- PSA (if applicable): ______\n- Other: ______"
+  },
+  {
     "category": "Handover",
     "title": "SBAR — Investigations Pending",
     "keywords": "sbar handover endorse next shift workup pending investigations",
@@ -179,15 +198,5 @@ const TEMPLATES = [
     "exam": "",
     "mdm": "",
     "discharge": "Prior to the patient's presentation to the Emergency Department, I was contacted by Dr. ______ from ______, who informed me that she/he had assessed the patient and had requested a CT head. She/he stated that the patient would attend the Emergency Department following completion of the CT scan.\n\nI explained to Dr. ______ that, irrespective of the CT head findings, if the patient remained symptomatic following the reported head injury, she/he would require further clinical assessment and, depending on the clinical findings, neurosurgical evaluation. I further explained that neurosurgical services are not available at our facility and that, if neurosurgical assessment were indicated, the patient would ultimately require referral/transfer to SMC.\n\nDr. ______ stated that this was the approach being followed by herself/himself and the doctors at their facility.\n\nThe patient was also informed that a normal/negative CT head would not necessarily exclude the need for further assessment, particularly if the patient remained symptomatic, and that neurosurgical assessment may be required.\n\nThe patient was informed that neurosurgical services are not available at our facility and that the patient would need to be referred to SMC for neurosurgical assessment if indicated.\n\nThe CT head report and imaging were provided to the patient, with the imaging supplied on CD.\n\nA referral letter was also provided.\n\nThe patient was advised to attend SMC for further assessment, particularly in view of the ongoing symptoms and the lack of on-site neurosurgical services at our facility."
-  },
-  {
-    "category": "Nephro",
-    "title": "Acute Urinary Retention",
-    "keywords": "acute urinary retention aur bph foley catheter bladder prostate",
-    "history": "Patient is a 69-year-old male, known to have benign prostatic hyperplasia (BPH) on regular treatment, no known drug allergies.\n\nPresented to the ED with acute urinary retention since 8 AM.\n\nPrevious similar episode approximately 2 years ago.\n\nDenied chest pain, shortness of breath, fever, hematuria, or dysuria.",
-    "exam": "Conscious, alert and oriented x3, in pain.\nGCS 15/15.\n\nCVS: S1 + S2, no murmur.\nChest: equal air entry bilaterally, no added sounds.\n\nPA: soft, lax, distended bladder palpable approximately 1 finger-breadth below the umbilicus, non-tender / tender on palpation.\n\nExternal genitalia: no visible abnormality, no phimosis, no meatal stenosis.",
-    "mdm": "Presentation consistent with acute urinary retention in the context of known BPH.\n\nDifferential diagnoses considered including BPH, urethral stricture, constipation, medication-induced retention, neurogenic bladder, and other causes as appropriate.\n\nRelevant investigations sent including urine analysis, renal function, PSA if applicable, and other bloods as clinically indicated.\n\nUrinary catheterization performed as documented.",
-    "insurance": "ORDERS / PROCEDURE CODES\n\nCatheterization Procedure:\n- Catheterization-Foley — Code: 8134B\n\nEquipment:\n- Catheter Holder / Foley StatLock (FOL0101CE) — Code: UR3292\n\nLaboratory:\n- Urine analysis / urine culture: ______\n- Renal function (U/C/E): ______\n- CBC: ______\n- PSA (if applicable): ______\n- Other: ______",
-    "discharge": "Under aseptic technique, urethral catheterization was performed.\n\nFoley catheter size ___ Fr inserted atraumatically.\n\nImmediate clear / blood-stained urine drained upon insertion.\n\nBalloon inflated with 10cc / 30cc of sterile water and catheter secured.\n\nTotal urine drained: approximately ___ mls.\n\nPatient's pain and discomfort improved significantly following catheterization.\n\nLaboratory investigations sent as documented.\n\nPatient and family educated regarding catheter care.\n\nSafety ER return instructions explained including fever, rigors, reduced or absent urine output via catheter, worsening pain, hematuria, or any other concerns.\n\nFollow up with urology arranged / advised for further management of underlying BPH."
   }
 ];

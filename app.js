@@ -5,10 +5,7 @@ const summary = document.getElementById("summary");
 const clearSearch = document.getElementById("clearSearch");
 const themeToggle = document.getElementById("themeToggle");
 
-const CATEGORY_ORDER = [
-  "All","ENT","Chest","Cardio","GI","Neuro","Trauma","MSK","Nephro","Handover","Medicolegal"
-];
-
+const CATEGORY_ORDER = ["All","ENT","Chest","Cardio","GI","Neuro","Trauma","MSK","Nephro","Handover","Medicolegal"];
 const CATEGORY_CLASS = {
   "All":"all","ENT":"ent","Chest":"chest","Cardio":"cardio","GI":"gi",
   "Neuro":"neuro","Trauma":"trauma","MSK":"msk","Nephro":"nephro","Handover":"handover","Medicolegal":"medicolegal"
@@ -17,9 +14,7 @@ const CATEGORY_CLASS = {
 let activeCategory = "All";
 
 function escapeHtml(text) {
-  return String(text || "").replace(/[&<>"']/g, m => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-  }[m]));
+  return String(text || "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 }
 
 function copyText(text, button) {
@@ -52,66 +47,53 @@ function renderCategories() {
 }
 
 function haystack(t) {
-  return [t.category, t.title, t.keywords, t.history, t.exam, t.mdm, t.discharge, t.insurance]
-    .join(" ").toLowerCase();
+  return [t.category, t.title, t.keywords, t.history, t.exam, t.mdm, t.discharge, t.insurance].join(" ").toLowerCase();
 }
 
 function matches(t, query) {
   if (activeCategory !== "All" && t.category !== activeCategory) return false;
   const q = query.toLowerCase().trim();
   if (!q) return true;
-  const words = q.split(/\s+/).filter(Boolean);
-  return words.every(w => haystack(t).includes(w));
+  return q.split(/\s+/).filter(Boolean).every(w => haystack(t).includes(w));
 }
 
 function categoryBg(cat) {
-  const colors = {
+  return {
     "ENT":"#0891b2","Chest":"#0284c7","Cardio":"#dc2626","GI":"#ea580c",
-    "Neuro":"#2563eb","Trauma":"#ca8a04","MSK":"#be185d","Nephro":"#9333ea","Handover":"#0f766e","Medicolegal":"#1e3a5f"
-  };
-  return colors[cat] || "#64748b";
+    "Neuro":"#2563eb","Trauma":"#ca8a04","MSK":"#be185d","Nephro":"#9333ea",
+    "Handover":"#0f766e","Medicolegal":"#1e3a5f"
+  }[cat] || "#64748b";
 }
 
 function render() {
   const q = search.value.trim();
   const list = TEMPLATES.filter(t => matches(t, q));
-
-  summary.textContent =
-    `${list.length} template(s) shown` +
+  summary.textContent = `${list.length} template(s) shown` +
     (activeCategory !== "All" ? ` in ${activeCategory}` : "") +
     (q ? ` matching "${q}"` : "");
-
   results.innerHTML = "";
-
-  if (!list.length) {
-    results.innerHTML = `<div class="no-results">No templates found.</div>`;
-    return;
-  }
+  if (!list.length) { results.innerHTML = `<div class="no-results">No templates found.</div>`; return; }
 
   list.forEach(t => {
     const card = document.createElement("article");
     card.className = "card";
-
     const combined = buildCombined(t);
     const blocks = [
-      ["History", t.history],
-      ["Physical Examination", t.exam],
-      ["MDM / Differential Diagnosis", t.mdm],
-      ["Discharge / Advice / Red Flags", t.discharge],
+      ["History", t.history],["Physical Examination", t.exam],
+      ["MDM / Differential Diagnosis", t.mdm],["Discharge / Advice / Red Flags", t.discharge],
       ["Insurance / Imaging Justification", t.insurance]
     ].filter(([_, text]) => text);
 
     card.innerHTML = `
       <div class="card-title" style="background:${categoryBg(t.category)}">
         <h2>${escapeHtml(t.title)}</h2>
-        <div style="display:flex; align-items:center; gap:8px;">
+        <div style="display:flex;align-items:center;gap:8px;">
           <div class="badge">${escapeHtml(t.category)}</div>
           <span class="chevron">▾</span>
         </div>
       </div>
       <div class="card-body"></div>
     `;
-
     const cardTitle = card.querySelector(".card-title");
     const cardBody = card.querySelector(".card-body");
     cardTitle.style.cursor = "pointer";
@@ -119,13 +101,7 @@ function render() {
 
     const allBlock = document.createElement("div");
     allBlock.className = "block";
-    allBlock.innerHTML = `
-      <div class="block-head">
-        <h3>Full Note Block</h3>
-        <button>Copy Full</button>
-      </div>
-      <pre>${escapeHtml(combined)}</pre>
-    `;
+    allBlock.innerHTML = `<div class="block-head"><h3>Full Note Block</h3><button>Copy Full</button></div><pre>${escapeHtml(combined)}</pre>`;
     allBlock.querySelector("button").onclick = e => copyText(combined, e.target);
     cardBody.appendChild(allBlock);
 
@@ -133,13 +109,7 @@ function render() {
       const block = document.createElement("div");
       block.className = "block";
       const isInsurance = label === "Insurance / Imaging Justification";
-      block.innerHTML = `
-        <div class="block-head">
-          <h3 ${isInsurance ? 'style="color:var(--green)"' : ""}>${escapeHtml(label)}</h3>
-          <button>Copy</button>
-        </div>
-        <pre>${escapeHtml(text)}</pre>
-      `;
+      block.innerHTML = `<div class="block-head"><h3 ${isInsurance ? 'style="color:var(--green)"' : ""}>${escapeHtml(label)}</h3><button>Copy</button></div><pre>${escapeHtml(text)}</pre>`;
       block.querySelector("button").onclick = e => copyText(text, e.target);
       cardBody.appendChild(block);
     });
@@ -150,18 +120,12 @@ function render() {
 }
 
 clearSearch.onclick = () => { search.value = ""; render(); search.focus(); };
-
 themeToggle.onclick = () => {
   document.body.classList.toggle("dark");
   themeToggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
   localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
 };
-
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-  themeToggle.textContent = "🌙";
-}
-
+if (localStorage.getItem("theme") === "dark") { document.body.classList.add("dark"); themeToggle.textContent = "🌙"; }
 search.addEventListener("input", render);
 renderCategories();
 render();
