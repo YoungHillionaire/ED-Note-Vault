@@ -3,32 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
   <title>ED Note Vault</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <div class="hero">
-    <div>
-      <h1>ED Note Vault</h1>
-      <p>ED templates by system: History, Examination, MDM/DDx and Discharge notes.</p>
+  <header class="app-header">
+    <div class="shell header-shell">
+      <div class="brand-row">
+        <div>
+          <div class="eyebrow">Emergency Department Documentation</div>
+          <h1>ED Note Vault</h1>
+          <p class="subtitle">Fast, searchable ED templates for history, examination, MDM, discharge and medicolegal documentation.</p>
+        </div>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle dark mode">☀️</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input id="search" type="search" placeholder="Search diagnosis, symptom, keyword…" autocomplete="off" />
+          <kbd>/</kbd>
+          <button id="clearSearch" class="text-btn">Clear</button>
+        </div>
+        <div class="toolbar-actions">
+          <button id="favoritesToggle" class="ghost-btn" aria-pressed="false">★ Favorites</button>
+          <button id="recentToggle" class="ghost-btn" aria-pressed="false">↺ Recent</button>
+          <button id="expandAll" class="ghost-btn">Expand all</button>
+          <button id="collapseAll" class="ghost-btn">Collapse all</button>
+        </div>
+      </div>
+
+      <div id="categoryGrid" class="category-grid"></div>
     </div>
-    <button id="themeToggle" title="Toggle theme">☀️</button>
-  </div>
-  <div class="search-wrap">
-    <input id="search" type="search" placeholder="Search templates..." />
-    <button id="clearSearch">Clear</button>
-  </div>
-  <div id="categoryGrid"></div>
-</header>
-<main>
-  <section class="notice">
-    <strong>Use safely:</strong> Copy, paste, then edit every note to match the actual patient, your real exam, investigations, local policy and specialist advice.
-  </section>
-  <div id="summary"></div>
-  <section id="results"></section>
-</main>
-<script src="data.js"></script>
-<script src="app.js"></script>
+  </header>
+
+  <main class="shell app-main">
+    <section class="notice" aria-label="Safety notice">
+      <div class="notice-icon">!</div>
+      <div>
+        <strong>Clinical use reminder</strong>
+        <p>Copy, paste, then edit every note to reflect the actual patient, your own examination, investigations, local policy and specialist advice.</p>
+      </div>
+    </section>
+
+    <section class="results-toolbar">
+      <div id="summary" class="summary"></div>
+      <div class="view-toggle" aria-label="View density">
+        <button id="comfortableView" class="view-btn active">Comfortable</button>
+        <button id="compactView" class="view-btn">Compact</button>
+      </div>
+    </section>
+
+    <section id="results" aria-live="polite"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

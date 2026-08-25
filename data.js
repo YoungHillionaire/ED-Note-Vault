@@ -36,7 +36,7 @@ const TEMPLATES = [
     "discharge": "Feels better, no ongoing chest pain at time of discharge.\n\nSafety ER return instructions explained including recurrent/worsening chest pain, SOB, syncope, palpitations, diaphoresis, vomiting, or any other concerns.\n\nFollow up with primary care/cardiology as appropriate."
   },
   {
-    "category": "Trauma",
+    "category": "MSK",
     "title": "Low Back Pain / Sciatica",
     "keywords": "back pain sciatica radiculopathy cauda equina red flags lumbar",
     "history": "Patient no past medical illness, no known drug allergies.\n\nPresented to the ED with ___ days history of lower back pain.\n\nPain radiates to right / left lower limb / no radiation as documented.\n\nAssociated with numbness / tingling / no numbness as documented.\n\nNo history of trauma / mechanism: ______.\n\nDenied fever, weight loss, IV drug use, steroid use, malignancy history, saddle anesthesia, urinary retention or incontinence, fecal incontinence, or progressive leg weakness.",
