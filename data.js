@@ -9,6 +9,15 @@ const TEMPLATES = [
     "discharge": "Feels better.\n\nSafety ER return instructions explained including shortness of breath, chest pain, persistent fever, difficulty swallowing, persistent vomiting, reduced oral intake or any other concerns.\n\nFollow up with ENT as needed."
   },
   {
+    "category": "ENT",
+    "title": "Ear Foreign Body / Removal",
+    "keywords": "ear foreign body fb cotton bud earbud insect external auditory canal crocodile forceps alligator forceps removal",
+    "history": "Patient is a ___-year-old male/female, no past medical illness, no known drug allergies.\\n\\nPresented to the ED with a foreign body in the right / left ear for approximately ___ hour(s) / day(s).\\n\\nForeign body reported as cotton bud / earbud tip / insect / other: ______.\\n\\nNo associated ear pain / bleeding / discharge / hearing loss / tinnitus / dizziness as documented.\\n\\nDenied any other complaints.",
+    "exam": "Conscious, alert and oriented x3, not in distress.\\nGCS 15/15.\\n\\nRight / Left Ear:\\nForeign body visualized within the external auditory canal, appearing as ______.\\nNo active bleeding or discharge.\\nNo obvious external auditory canal injury.\\n\\nContralateral ear unremarkable.",
+    "mdm": "Foreign body visualized within the right / left external auditory canal.\\n\\nForeign body removal indicated and procedure explained to the patient.\\n\\nFollowing removal, the external auditory canal and tympanic membrane were re-examined to assess for residual foreign body, canal trauma, bleeding, or tympanic membrane injury.",
+    "discharge": "FOREIGN BODY REMOVAL\\n\\nForeign body removed completely using crocodile / alligator forceps under direct visualization.\\n\\nEar canal re-examined following removal. No residual foreign body identified.\\nNo active bleeding or significant canal trauma.\\nTympanic membrane visualized and appears intact / clear.\\n\\nPatient tolerated the procedure well with no immediate complication.\\n\\nAdvised to avoid inserting cotton buds or other objects into the ear canal.\\n\\nSafety ER return instructions explained including increasing ear pain, bleeding, discharge, hearing loss, dizziness, fever, or any other concerns.\\n\\nFollow up with ENT if symptoms persist or recur."
+  },
+  {
     "category": "Trauma",
     "title": "Trauma Assessment (Primary + Secondary Survey)",
     "keywords": "trauma primary survey secondary survey head to toe xabcde",
