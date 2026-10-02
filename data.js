@@ -194,6 +194,15 @@ const TEMPLATES = [
     "insurance": "X-RAY — IMAGING / INSURANCE JUSTIFICATION\n\nPatient sustained an acute traumatic injury to the right / left ______ with localized pain and tenderness over ______, associated with swelling / restricted range of motion / difficulty weight-bearing as documented.\n\nPlain radiography is clinically indicated to exclude acute fracture, dislocation, or other bony injury and to guide further management."
   },
   {
+    "category": "Trauma",
+    "title": "Foot / Sole Foreign Body",
+    "keywords": "foot sole foreign body FB thorn nail glass stone puncture wound stepped on object shoe retained foreign body",
+    "history": "Patient is a ___-year-old male/female, medically free / known case of ______, with no known drug allergies / allergy to ______.\n\nPresented to the ED after stepping on / feeling a foreign body in the right / left sole approximately ___ minutes/hours ago.\n\nPatient reports feeling something inside the shoe / sole, described as possible thorn / nail / glass / stone / bone / other: ______.\n\nForeign body was removed by the patient / remained in place / uncertain.\n\nAssociated with pain / bleeding / difficulty walking / none.\n\nDenied numbness, weakness, fever, or other complaints.",
+    "exam": "Conscious, alert and oriented x3, not in distress.\nGCS 15/15.\n\nRight / Left foot/sole:\nNo visible foreign body.\nNo tenderness, erythema, swelling, or active bleeding.\nSkin appears intact with no obvious puncture wound or other significant external injury.\nFull range of motion of the toes and ankle.\nDistal neurovascular examination intact.",
+    "mdm": "History of possible foreign body to the sole. No foreign body identified on current examination / foreign body removed as documented.\n\nNo clinical evidence of significant soft-tissue injury or neurovascular compromise at present.\n\nConsider X-ray / ultrasound if there is persistent focal pain, suspected retained radiopaque foreign body, puncture wound, or clinical concern for retained foreign material.",
+    "discharge": "Wound care and avoidance of further manipulation of the area advised.\n\nReturn to the ED for increasing pain, swelling, redness, discharge, fever, difficulty walking, numbness, or any concern for retained foreign body."
+  },
+  {
     "category": "Handover",
     "title": "Handover — Case Received From Previous Shift",
     "keywords": "handover received previous shift case received endorsed received pending investigations reassessment disposition",
