@@ -267,4 +267,14 @@ const TEMPLATES = [
     "mdm": "Clinical presentation concerning for / consistent with anaphylaxis following suspected exposure to ______.\n\nAirway, breathing and circulation assessed immediately with continuous reassessment.\n\nIM adrenaline administered as documented, with additional supportive treatment and repeat dosing if clinically indicated. Oxygen, IV access, fluids and adjunctive medications provided as appropriate to the patient's condition and local protocol.\n\nResponse to treatment documented with repeat vital signs and reassessment of airway, respiratory, cardiovascular, skin and gastrointestinal features.\n\nPatient requires appropriate observation following clinical resolution, with escalation/admission as indicated by severity, treatment response, recurrence of symptoms, comorbidities and local protocol.",
     "discharge": "Following treatment and an appropriate period of observation, patient remained clinically stable with resolution / significant improvement of symptoms as documented.\n\nSuspected trigger and avoidance advice discussed. Adrenaline auto-injector use / prescription and emergency action plan discussed where appropriate.\n\nSafety ER return instructions explained including recurrent rash with breathing difficulty, throat tightness, tongue/lip swelling, wheeze, dizziness, syncope, persistent vomiting, or any recurrence of symptoms.\n\nFollow up with primary care / allergy-immunology clinic as appropriate."
   }
+  ,
+  {
+    "category": "Medicolegal",
+    "title": "Epigastric Pain — Refusal of ECG / Cardiac Enzymes",
+    "keywords": "epigastric pain upper abdominal pain atypical ACS acute coronary syndrome ECG EKG cardiac enzymes troponin refusal declined refused CPOE dyslipidemia hypertension",
+    "history": "",
+    "exam": "",
+    "mdm": "In view of the patient's age, history of dyslipidemia and hypertension, and presenting epigastric pain, the possibility of atypical acute coronary syndrome (ACS) was explained.\n\nECG and cardiac enzymes were strongly recommended; however, the patient firmly refused despite being informed of the potential risks, including missed ACS and serious complications.\n\nThe patient stated that she would reconsider the investigations if the pain did not resolve.",
+    "discharge": ""
+  }
 ];
