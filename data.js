@@ -7,7 +7,7 @@ const TEMPLATES = [
     "exam": "O – OBJECTIVE:\n\nConscious, alert and oriented x3, not in distress. GCS 15/15. Vitals reviewed.\n\nThroat: Congested, no exudates.\nChest: EAEB, no added sounds.\nCVS: S1 + S2, no murmur.\nAbdomen: Soft, lax, non-tender.",
     "mdm": "A – ASSESSMENT:\n\nAcute URTI, likely viral.\n\nDifferential diagnoses: Influenza / COVID-19 / pharyngitis / tonsillitis.\n\nP – PLAN:\n\nSymptomatic treatment and antipyretics as indicated.\nAdequate oral hydration and rest.\nInvestigations reviewed and discussed: ______.\nAntibiotics not indicated at present / ______.",
     "discharge": "REASSESSMENT:\n\nPatient reassessed following treatment. Symptoms improved / partially improved / unchanged. Vitals reviewed.\n\nInvestigations and results explained and discussed with the patient: ______.\n\nDISPOSITION:\n\nDischarged home in stable condition.\nDiagnosis, prescribed medications and supportive care explained.\n\nSafety-netting and ED return precautions discussed, including persistent fever, shortness of breath, chest pain, difficulty swallowing, persistent vomiting, severe abdominal pain, inability to tolerate oral intake, signs of dehydration, worsening symptoms, or any other new concerning symptoms. Advised to return to the ED if symptoms worsen or any red flags develop.\n\nPatient verbalized understanding of the instructions."
-  }},
+  },
   {
     "category": "ENT",
     "title": "Ear Foreign Body / Removal",
